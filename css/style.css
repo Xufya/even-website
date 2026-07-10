@@ -343,6 +343,19 @@ h2 {
     margin-top: 0.5rem;
 }
 
+/* COMPETÊNCIAS & IDIOMAS */
+.competencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.competencias-col h3 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
 /* CONTACTO */
 .contacto {
     background: var(--primary);
