@@ -13,3 +13,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 document.querySelector('.btn-contactar').addEventListener('click', function() {
     document.querySelector('#contacto').scrollIntoView({ behavior: 'smooth' });
 });
+
+// Toggle de idioma (PT / EN)
+const langToggle = document.getElementById('lang-toggle');
+let currentLang = 'pt';
+
+langToggle.addEventListener('click', function() {
+    currentLang = currentLang === 'pt' ? 'en' : 'pt';
+    langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+    document.documentElement.lang = currentLang;
+
+    document.querySelectorAll('[data-pt]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${currentLang}`);
+    });
+});

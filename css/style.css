@@ -1,11 +1,13 @@
-/* VARIÁVEIS */
+/* VARIÁVEIS — Paleta da marca "even HR" */
 :root {
-    --primary: #1a2b3d;
-    --secondary: #2c4563;
-    --accent: #00b4d8;
+    --primary: #1C2B45;      /* Azul profundo */
+    --secondary: #3C5471;    /* Azul aço */
+    --mist: #C5D0DB;         /* Azul névoa */
+    --sand: #E9DEC6;         /* Areia */
+    --gold: #C2A24E;         /* Dourado */
     --text: #2c3e50;
     --light: #f8f9fa;
-    --border: #e0e0e0;
+    --border: #DAD7D0;
 }
 
 /* RESET */
@@ -19,6 +21,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: var(--text);
     line-height: 1.6;
+    background: #FFFFFF;
 }
 
 /* HEADER / NAV */
@@ -43,10 +46,12 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary);
+    letter-spacing: -0.5px;
 }
 
 .logo .hr {
-    color: var(--accent);
+    color: var(--gold);
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -63,7 +68,30 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+    color: var(--gold);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-lang {
+    background: transparent;
+    border: 1.5px solid var(--secondary);
+    color: var(--secondary);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.btn-lang:hover {
+    background: var(--secondary);
+    color: white;
 }
 
 .btn-contactar {
@@ -96,7 +124,7 @@ body {
 }
 
 .hero .subtitle {
-    color: #999;
+    color: var(--secondary);
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
@@ -117,11 +145,12 @@ body {
 }
 
 .hero-tags span {
-    background: var(--light);
+    background: var(--mist);
+    color: var(--primary);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    color: var(--text);
+    font-weight: 500;
 }
 
 /* SEÇÕES */
@@ -140,7 +169,7 @@ h2 {
 
 .section-subtitle {
     text-align: center;
-    color: #666;
+    color: var(--secondary);
     margin-bottom: 2rem;
 }
 
@@ -172,7 +201,7 @@ h2 {
 }
 
 .servico-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(28, 43, 69, 0.1);
 }
 
 .servico-card h3 {
@@ -180,9 +209,67 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.servico-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.8rem;
+    background: var(--mist);
+    color: var(--primary);
+}
+
+.servico-tag.admin {
+    background: var(--sand);
+    color: var(--primary);
+}
+
+.servico-tag.consultoria {
+    background: var(--gold);
+    color: white;
+}
+
+.servico-tag.eventos {
+    background: var(--secondary);
+    color: white;
+}
+
 /* EXPERIÊNCIA */
+.experiencia-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.experiencia-header-top h2 {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.btn-download-cv {
+    background: var(--gold);
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.btn-download-cv:hover {
+    background: #a88639;
+    color: white;
+}
+
 .experiencia-item {
-    border-left: 3px solid var(--accent);
+    border-left: 3px solid var(--gold);
     padding-left: 2rem;
     margin-bottom: 3rem;
 }
@@ -192,6 +279,8 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .experiencia-header h3 {
@@ -200,15 +289,16 @@ h2 {
 }
 
 .periodo {
-    background: var(--light);
+    background: var(--mist);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--primary);
+    font-weight: 500;
 }
 
 .empresa {
-    color: #666;
+    color: var(--secondary);
     font-size: 0.95rem;
     margin-bottom: 1rem;
 }
@@ -229,9 +319,9 @@ h2 {
 }
 
 .destaque {
-    background: #fffbea;
+    background: var(--sand);
     padding: 1rem;
-    border-left: 3px solid #ffc107;
+    border-left: 3px solid var(--gold);
     margin-top: 1rem;
     border-radius: 4px;
 }
@@ -248,7 +338,7 @@ h2 {
 }
 
 .formacao-item .detalhe {
-    color: #666;
+    color: var(--secondary);
     font-size: 0.95rem;
     margin-top: 0.5rem;
 }
@@ -265,6 +355,10 @@ h2 {
     color: white;
 }
 
+.contacto p {
+    color: var(--mist);
+}
+
 .contacto-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -272,13 +366,22 @@ h2 {
     margin-top: 2rem;
 }
 
+.contacto-item strong {
+    color: var(--gold);
+}
+
 .contacto-item a {
-    color: var(--accent);
+    color: var(--mist);
     text-decoration: none;
 }
 
 .contacto-item a:hover {
+    color: var(--gold);
     text-decoration: underline;
+}
+
+.contacto-item p {
+    color: var(--mist);
 }
 
 /* FOOTER */
@@ -286,7 +389,7 @@ h2 {
     text-align: center;
     padding: 2rem;
     background: var(--light);
-    color: #666;
+    color: var(--secondary);
     font-size: 0.9rem;
 }
 
@@ -311,5 +414,15 @@ h2 {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+
+    .experiencia-header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experiencia-header-top h2 {
+        text-align: center;
+        width: 100%;
     }
 }
